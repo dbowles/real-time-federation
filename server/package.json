@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "devServer": "cross-env NODE_ENV=development concurrently -k npm:server:*",
     "server": "concurrently -k npm:server:*",
     "server:authors": "nodemon ./src/services/authors/index.js",
     "server:posts": "nodemon ./src/services/posts/index.js",
@@ -24,6 +25,7 @@
   "devDependencies": {
     "nodemon": "2.0.4",
     "wait-on": "5.2.0",
-    "concurrently": "5.3.0"
+    "concurrently": "5.3.0",
+    "cross-env": "^7.0.3"
   }
 }

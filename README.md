@@ -57,12 +57,16 @@ To successfully implement this architecture, the following assumptions must be s
 - Designed to be an architecturally separate component from the implementing services
 
 ## Usage
+Steps to configure:
+  1. Add a `.env` file to the `server` directory using the `server/.env.sample` file as a template
+  2. Add a `.env` file to the `client` directory using the `client/.env.sample` file as a template
 
-Steps to configure and run (using Docker):
+To run (using Docker):
+  3. Run `docker-compose up --build` from the root directory of this repository
 
-1. Add a `.env` file to the `server` directory using the `server/.env.sample` file as a template
-2. Add a `.env` file to the `client` directory using the `client/.env.sample` file as a template
-3. Run `docker-compose up --build` from the root directory of this repository
+To run locally:
+   3. make sure your redis server is running on localhost, for development this happens to be the redis in docker
+   4. `cd server` and run `npm run devServer`
 
 GraphQL Playground will be available at [http://localhost:4000/graphql](http://localhost:4000/graphql).
 
